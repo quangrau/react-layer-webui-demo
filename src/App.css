@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -8,14 +9,31 @@
 }
 
 .App-header {
+  text-align: center;
   background-color: #222;
-  height: 150px;
+  height: 80px;
   padding: 20px;
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+.App-content {
+  display: flex;
+  height: 100%;
+}
+
+.App-aside {
+  flex: 4;
+  height: calc(100% - 120px);
+  overflow-y: scroll;
+  border-right: 1px solid #DDD;
+}
+
+.App-main {
+  flex: 6;
+}
+.App-main layer-conversation-panel {
+  height: calc(100vh - 120px);
+  overflow: hidden;
 }
 
 @keyframes App-logo-spin {
